@@ -1,0 +1,37 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+/*body div.ng-scope{
+	height: 100%
+}
+*/
+body{
+	background: url("../images/goldengate.jpg");
+    background-position: 85% 70%; 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.menu-dropdown{
+	display: none;
+}
+
+@media (max-width: 767px){
+
+	body{
+		background-size: 200% 100%;
+		background-position: 85% 40%; 
+	}
+
+	.menu-dropdown{
+		display: inline-block;
+		float: right;
+	}
+
+	.navigation-options{
+		display: none;
+	}
+
+}

@@ -1,0 +1,21 @@
+<header>
+<nav class="navbar navbar-inverse navbar-fixed-top" style="opacity: 0.7; border-radius: 0px; margin-bottom: 0px" ng-controller="TabsCtrl">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" style="color: white; margin-right: 10px">Paul Gaudin</a>
+      <a class="navbar-brand menu-dropdown"><span class="glyphicon glyphicon-menu-hamburger " aria-hidden="true"></span></a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav navbar-right navigation-options">
+        <li ng-class="{active:isActiveTab('/home')}"><a ui-sref="main.home" >Home</a></li>
+    <li ng-class="{active:isActiveTab('/blog')}"><a ui-sref="main.blog">Blog</a></li> 
+        <li ng-class="{active:isActiveTab('/portfolio')}"><a ui-sref="main.portfolio">Portfolio</a></li> 
+        <li ng-class="{active:isActiveTab('/contact')}"><a ui-sref="main.contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<body>
+	<div ui-view></div>	
+</body>

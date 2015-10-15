@@ -1,0 +1,54 @@
+#video-container{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+    opacity: 0;
+    background: -webkit-radial-gradientradial-gradient( circle at 97%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+	background: radial-gradient( circle at 97%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));	
+    -webkit-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    -ms-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
+    transition: opacity 1s linear;
+}
+
+.main-play{
+  position: fixed;
+  vertical-align: middle;
+  top: calc(50%);
+  transform: translateY(-50%);
+  left: calc(50% - 50px);
+}
+
+.main-play span{
+	font-size: 100px;
+	color: white;
+	text-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
+}
+
+.play-glow span{
+	text-shadow: 0px 0px 37px rgba(255, 255, 255, 1);
+}
+
+.main-play span{
+	-webkit-transition: text-shadow 2s ease-in-out;
+    -moz-transition: text-shadow 2s ease-in-out;
+    -ms-transition: text-shadow 2s ease-in-out;
+    -o-transition: text-shadow 2s ease-in-out;
+    transition: text-shadow 2s ease-in-out;
+}
+
+.meet-paul{
+  display: none;
+  position: fixed;
+  top: calc(50% - 50px);
+  transform: translateY(-50%);
+  left: calc(50% - 190px);
+  -webkit-transform: perspective(400px);
+  transform: perspective(400px);
+}
+
+.meet-paul h1{
+	font-size: 55px;
+	color: white;
+}
