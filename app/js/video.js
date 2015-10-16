@@ -1,45 +1,123 @@
 $(document).ready(function(){
 
 
-playerGlow()
+	playerGlow()
 
-var glowPlayer = setInterval(function(){ playerGlow() }, 2000);
+	var glowPlayer = setInterval(function(){ playerGlow() }, 2000);
 
-function playerGlow() {
-	if($(".main-play").hasClass('play-glow')){
-		$(".main-play").removeClass('play-glow')
-	}else{
-		$(".main-play").addClass('play-glow')
+	function playerGlow() {
+		if($(".main-play").hasClass('play-glow')){
+			$(".main-play").removeClass('play-glow')
+		}else{
+			$(".main-play").addClass('play-glow')
+		}
 	}
-}
 
-function stopPlayGlow() {
-    clearInterval(glowPlayer);
-}
+	function stopPlayGlow() {
+		clearInterval(glowPlayer);
+	}
 
-$(document).on("click", ".main-play", function(event){
-	event.preventDefault()
-	stopPlayGlow()
-	$(this).fadeOut()
-	$(".navbar").fadeOut()
-	window.setTimeout(function(){
+	$(document).on("click", ".main-play", function(event){
+		event.preventDefault()
+		stopPlayGlow()
+		$(this).fadeOut()
+		$(".navbar").fadeOut()
 		meetPaul()
-	}, 500);
-})
-
-function meetPaul(){
-	$(".meet-paul").fadeIn("slow", function(){
-		console.log("next step")
-		$("#video-container").css({
-			background: "-webkit-radial-gradientradial-gradient( circle at 97%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))",
-			background: "radial-gradient( circle at 97%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))",
-			opacity: 1
-		})
-	window.setTimeout(function(){
-		$(".meet-paul").addClass("flipOutY")
-	}, 2000);
 	})
-}
+
+	function meetPaul(){
+		$(".meet-paul").fadeIn("slow", function(){
+			$("#video-container").css({
+				background: "-webkit-radial-gradientradial-gradient( circle at 97%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))",
+				background: "radial-gradient( circle at 97%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))",
+				opacity: 1
+			})
+			window.setTimeout(function(){
+				$(".meet-paul").addClass("flipOutY")
+			}, 1500);
+			window.setTimeout(function(){
+				aScientistAndMusician()
+			}, 1900);
+		})
+	}
+
+	function aScientistAndMusician(){
+		$("#scientist-slide").removeClass("no-display")
+		window.setTimeout(function(){
+			$("#video-container").css({
+				background: "url('images/pressy.jpg')",
+				"background-position": "85% 70%",
+				"background-size": "100% 100%",
+			})
+		}, 1000);
+		window.setTimeout(function(){
+			$(".scientist-musician").addClass("rotateOutUpRight");
+			$("#scientist-slide").css("background-color", "hsla(0,0%,0%,0.38)")
+			window.setTimeout(function(){
+				$(".developer").removeClass("no-display")
+				creativity()
+			}, 200);
+		}, 1500);
+	}
+
+
+
+	function creativity(){
+		window.setTimeout(function(){
+			$(".developer").fadeOut()
+			$("#creativity").fadeIn(1, function(){
+				$("#creativity").css("background-size", "150% 150%");
+				$("#video-container").fadeOut(500, function(){
+					$("#spirit").fadeIn();
+				});
+			});
+			drive()
+		}, 2000);
+	}
+
+	function drive(){
+		$("#spirit-container").animate({
+			top: '+=8%'
+		}, 5000, function(){
+			$("#spirit-container").css("top", "47%")
+			$("#spirit").text("Unexplored").fadeIn(500, function(){})	
+		})
+		window.setTimeout(function(){
+			$("#spirit").fadeOut(500, function(){
+				$("#spirit").text("Drive him to take his work places").fadeIn()
+				$("#unexplored").removeClass("no-display");
+			})
+			window.setTimeout(function(){
+				$("#spirit").fadeOut(500, function(){	
+					$("#creativity").fadeOut(500, function(){
+						$("#spirit-container").css("font-size", "70px")
+
+
+						clouds()
+					})
+				})
+			}, 2000);
+		}, 2000);
+	}
+
+	function clouds(){
+
+
+		// window.setTimeout(function(){
+
+		// 	$("#unexplored").addClass("slideOutDown")
+		// 	$("#clouds").removeClass("no-display")
+		// }, 2000);
+		window.setTimeout(function(){
+			$("#spirit").fadeOut();
+			$("#unexplored").css("background-position", "50% 10%");
+			window.setTimeout(function(){
+				$("#spirit-container").css("font-size", "55px");
+				$("#spirit").text("Building for the web").fadeIn();
+			}, 1500);
+		}, 1650);
+
+	}
 
 
 })

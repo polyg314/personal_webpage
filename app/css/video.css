@@ -1,18 +1,20 @@
 #video-container{
+  z-index: 15;
 	position: fixed;
 	width: 100%;
 	height: 100%;
     opacity: 0;
     background: -webkit-radial-gradientradial-gradient( circle at 97%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 	background: radial-gradient( circle at 97%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));	
-    -webkit-transition: opacity 1s linear;
-    -moz-transition: opacity 1s linear;
-    -ms-transition: opacity 1s linear;
-    -o-transition: opacity 1s linear;
-    transition: opacity 1s linear;
+    -webkit-transition: opacity 1.5s linear;
+    -moz-transition: opacity 1.5s linear;
+    -ms-transition: opacity 1.5s linear;
+    -o-transition: opacity 1.5s linear;
+    transition: opacity 1.5s linear;
 }
 
 .main-play{
+  z-index: 20;
   position: fixed;
   vertical-align: middle;
   top: calc(50%);
@@ -38,7 +40,14 @@
     transition: text-shadow 2s ease-in-out;
 }
 
+
+.no-display{
+	display: none;
+}
+
+
 .meet-paul{
+  z-index: 18;
   display: none;
   position: fixed;
   top: calc(50% - 50px);
@@ -52,3 +61,156 @@
 	font-size: 55px;
 	color: white;
 }
+
+
+
+#scientist-slide{
+  z-index: 18;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: hsla(0,0%,5%,1);
+	-webkit-transition: background-color 2s ease-in-out;
+    -moz-transition: background-color 2s ease-in-out;
+    -ms-transition: background-color 2s ease-in-out;
+    -o-transition: background-color 2s ease-in-out;
+    transition: background-color 2s ease-in-out;
+}
+
+.scientist-musician{
+  position: fixed;
+  top: calc(50% - 90px);
+  transform: translateY(-50%);
+  margin-left: 3%;
+  -webkit-transform: perspective(400px);
+  transform: perspective(400px);
+  font-size: 55px;
+  color: white;
+}
+
+.developer{
+  position: fixed;
+  top: calc(50% - 20px);
+  transform: translateY(-50%);
+  right: 0%;
+  margin-right: 3%;
+  -webkit-transform: perspective(400px);
+  transform: perspective(400px);
+  font-size: 55px;
+  color: white;
+}
+
+#creativity{
+  display: none;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("../images/railroad.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 57%;
+  transition: background-size 5s linear;
+  -moz-transition: background-size 5s linear;
+  -ms-transition: background-size 5s linear;
+  -o-transition: background-size 5s linear;
+  -webkit-transition: background-size 5s linear;
+}
+
+#spirit-container{
+  z-index: 18;
+  width: 100%;
+  position: fixed;
+  top: 43%;
+  font-size: 45px;
+} 
+
+#spirit{
+  width: 100%;
+  text-align: center;
+
+  transform: translateY(-50%);
+  -webkit-transform: perspective(400px);
+  transform: perspective(400px);
+
+  color: white;
+}
+
+/*
+    background-size: 145%;
+    background-position: 84% 53%;*/
+/*#drive{
+  position: fixed;
+  top: 10%;
+  transform: translateY(-50%);
+  left: calc(50% - 500px);
+  -webkit-transform: perspective(400px);
+  transform: perspective(400px);
+  font-size: 65px;
+  color: white;
+}
+*/
+
+#unexplored{
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+  height: 200%;
+  background: url("../images/edited.jpg");
+  background-size: 100% 160%;
+  background-repeat: no-repeat;
+  background-position: 50% 170%;
+  -webkit-transition: background-position 1.5s linear;
+  -moz-transition: background-position 1.5s linear;
+  -ms-transition: background-position 1.5s linear;
+  -o-transition: background-position 1.5s linear;
+  transition: background-position 1.5s linear;
+}
+
+#unexplored:before {
+    content: '';
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom,#dc4225,#002f4b);
+    opacity: .6; 
+}
+
+/*
+#clouds{
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("../images/clouds.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}*/
+
+/*#clouds:before {
+    content: '';
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom,#dc4225,#002f4b);
+    opacity: .6; 
+}
+*/
+
+/*#unexplored-text{
+  position: fixed;
+  top: calc(50% - 70px);
+  transform: translateY(-50%);
+  left: calc(50% - 150px);
+  -webkit-transform: perspective(400px);
+  transform: perspective(400px);
+  font-size: 70px;
+  color: white;
+}
+*/
