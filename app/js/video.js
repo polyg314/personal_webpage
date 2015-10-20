@@ -77,9 +77,9 @@ $(document).ready(function(){
 
 	function drive(){
 		$("#spirit-container").animate({
-			top: '+=5%'
+			top: '-=5%'
 		}, 5000, function(){
-			$("#spirit-container").css("top", "47%")
+			$("#spirit-container").css("top", "43%")
 			$("#spirit").text("Unexplored").fadeIn(500, function(){})	
 		})
 		window.setTimeout(function(){
@@ -194,33 +194,60 @@ $(document).ready(function(){
 				right: '-100%'
 			}, 20000, function(){});
 		}, 12000);
-// #HTML
-
-// #jQuery
-
-// #nodeJS
-
-// #postgres
-
-// #mongoDB
-
-// #bootStrap
-
-// #photoshop
-
-// #git
-
-// #ionic
-
-// #meteor
-
-// #xCode
-
-// #cocoa
-
-// #swift
+		window.setTimeout(function(){		
+			pursuit()
+		}, 21000);
 	}
 
+	function pursuit(){
+		$("#pursuit").fadeIn(500, function(){
+			window.setTimeout(function(){		
+				$("#cover-1").fadeOut(750, function(){
+					// $("#cover-1").text("and");					
+				});
+			}, 500);
+			window.setTimeout(function(){		
+				$("#cover-2").fadeOut(750, function(){
+					$("#andPursing").fadeIn(2500, function(){
+						$("#andPursing").fadeOut(300,function(){
+							$("#andPursing").text("of").fadeIn(300, function(){
+								window.setTimeout(function(){
+									discovery()
+								}, 500)
+							})
+						})
+
+					});
+				});
+				$("#cover-1").fadeIn(750);
+			}, 1000);
+			window.setTimeout(function(){		
+				$("#cover-3").fadeOut(750, function(){
+					// $("#cover-3").text("the");
+				});
+				$("#cover-2").fadeIn(750);				
+			}, 1500);
+			window.setTimeout(function(){		
+				$("#cover-4").fadeOut(750, function(){
+
+				});
+				$("#cover-3").fadeIn(750);				
+			}, 2000);
+			window.setTimeout(function(){		
+				$("#cover-5").fadeOut(750, function(){
+					// $("#cover-5").text("of");
+				});
+				$("#cover-4").fadeIn(750);				
+			}, 2500);
+			window.setTimeout(function(){		
+				$("#cover-5").fadeIn(750);				
+			}, 3000);
+		});
+	}
+
+	function discovery(){
+
+	}
 
 })
 
