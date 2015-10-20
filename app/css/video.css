@@ -128,11 +128,9 @@
 #spirit{
   width: 100%;
   text-align: center;
-
   transform: translateY(-50%);
   -webkit-transform: perspective(400px);
   transform: perspective(400px);
-
   color: white;
 }
 
@@ -177,6 +175,73 @@
     left: 0;
     background-image: linear-gradient(to bottom,#dc4225,#002f4b);
     opacity: .6; 
+}
+
+.technologies{
+  z-index: 17;
+  position: fixed;
+  right: 101%;
+  width: 100%;
+  top: 50%;
+  text-align: right;
+  font-size: 45px;
+  color: white;
+}
+
+#AngularJS{
+  top: 35%;
+}
+
+#HTML{
+  top: 25%;
+}
+
+#jQuery{
+  top: 40%;
+}
+
+#nodeJS{
+  top: 55%;
+}
+
+#postgres{
+  top: 70%;
+}
+
+#mongoDB{
+  top: 85%;
+}
+
+#bootStrap{
+  top: 80%;
+}
+
+#photoshop{
+  top: 20%;
+}
+
+#git{
+  top: 30%;
+}
+
+#ionic{
+  top: 40%;
+}
+
+#meteor{
+  top: 60%;
+}
+
+#xCode{
+  top: 70%;
+}
+
+#cocoa{
+  top: 85%;
+}
+
+#swift{
+  top: 40%;
 }
 
 /*

@@ -77,7 +77,7 @@ $(document).ready(function(){
 
 	function drive(){
 		$("#spirit-container").animate({
-			top: '+=8%'
+			top: '+=5%'
 		}, 5000, function(){
 			$("#spirit-container").css("top", "47%")
 			$("#spirit").text("Unexplored").fadeIn(500, function(){})	
@@ -114,9 +114,111 @@ $(document).ready(function(){
 			window.setTimeout(function(){
 				$("#spirit-container").css("font-size", "55px");
 				$("#spirit").text("Building for the web").fadeIn();
+				flyBys()
 			}, 1500);
 		}, 1650);
 
+	}
+
+	function flyBys(){
+		window.setTimeout(function(){		
+			$("#AngularJS").animate({
+				right: '-100%'
+			}, 20000, function(){});
+		}, 10);
+		window.setTimeout(function(){		
+			$("#HTML").animate({
+				right: '-100%'
+			}, 20000, function(){});
+		}, 1500);
+		window.setTimeout(function(){		
+			$("#jQuery").animate({
+				right: '-100%'
+			}, 20000, function(){});
+		}, 1400);
+		window.setTimeout(function(){		
+			$("#nodeJS").animate({
+				right: '-100%'
+			}, 20000, function(){});
+		}, 3500);
+		window.setTimeout(function(){		
+			$("#postgres").animate({
+				right: '-100%'
+			}, 20000, function(){});
+		}, 2000);
+		window.setTimeout(function(){		
+			$("#mongoDB").animate({
+				right: '-100%'
+			}, 18000, function(){});
+		}, 4000);
+		window.setTimeout(function(){		
+			$("#bootStrap").animate({
+				right: '-100%'
+			}, 20000, function(){});
+		}, 4500);
+		window.setTimeout(function(){		
+			$("#photoshop").animate({
+				right: '-100%'
+			}, 20000, function(){});
+		}, 6500);
+		window.setTimeout(function(){		
+			$("#git").animate({
+				right: '-100%'
+			}, 20000, function(){});
+		}, 6000);
+		window.setTimeout(function(){
+			$("#ionic").animate({
+				right: '-100%'
+			}, 20000, function(){});
+		}, 8000);
+		window.setTimeout(function(){
+			$("#spirit").fadeOut(700, function(){
+				$("#spirit").text("and for mobile").fadeIn();
+			});		
+			$("#meteor").animate({
+				right: '-100%'
+			}, 20000, function(){});
+		}, 8500);
+		window.setTimeout(function(){		
+			$("#xCode").animate({
+				right: '-100%'
+			}, 20000, function(){});
+		}, 9500);
+		window.setTimeout(function(){		
+			$("#cocoa").animate({
+				right: '-100%'
+			}, 19000, function(){});
+		}, 10500);
+		window.setTimeout(function(){		
+			$("#swift").animate({
+				right: '-100%'
+			}, 20000, function(){});
+		}, 12000);
+// #HTML
+
+// #jQuery
+
+// #nodeJS
+
+// #postgres
+
+// #mongoDB
+
+// #bootStrap
+
+// #photoshop
+
+// #git
+
+// #ionic
+
+// #meteor
+
+// #xCode
+
+// #cocoa
+
+// #swift
 	}
 
 
